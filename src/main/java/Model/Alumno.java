@@ -21,7 +21,14 @@ public class Alumno {
 		this.cuartoSemestre = cuartoSemestre;
 		this.quintoSemestre = quintoSemestre;
 	}
-
+	public Alumno( ArrayList<Materia> primerSemestre, ArrayList<Materia> segundoSemestre, ArrayList<Materia> tercerSemestre,
+			ArrayList<Materia> cuartoSemestre, ArrayList<Materia> quintoSemestre) {
+		this.primerSemestre = primerSemestre;
+		this.segundoSemestre = segundoSemestre;
+		this.tercerSemestre = tercerSemestre;
+		this.cuartoSemestre = cuartoSemestre;
+		this.quintoSemestre = quintoSemestre;
+	}
 
 
 	public String getNoBoleta() {

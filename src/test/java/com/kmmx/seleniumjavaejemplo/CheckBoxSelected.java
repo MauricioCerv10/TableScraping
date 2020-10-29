@@ -43,7 +43,8 @@ public class CheckBoxSelected {
 	public void testGooglePage() {
 		driver.findElement(By.cssSelector("input[id*='ctl00_mainCopy_Txbx_Busqueda']")).sendKeys("2001400264");	
 		driver.findElement(By.cssSelector("input[id*='ctl00_mainCopy_Btn_Buscar']")).click();		
-		driver.get("https://www.saes.escasto.ipn.mx/Ejecutivo/BUSQUEDA_ALUMNO/BusquedaAlumnoRes.aspx?Boleta=2010400511&Tipo=Inscrito");		
+		String noBoleta = "2010400511";
+		driver.get("https://www.saes.escasto.ipn.mx/Ejecutivo/BUSQUEDA_ALUMNO/BusquedaAlumnoRes.aspx?Boleta="+noBoleta+"&Tipo=Inscrito");		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -54,6 +55,7 @@ public class CheckBoxSelected {
 		//System.out.println(	driver.getPageSource());	
 		TableReaderUtilities readerTBL = new TableReaderUtilities();
 		Alumno alumno = readerTBL.getAlumnoNotes(driver.getPageSource());
+		alumno.setNoBoleta(noBoleta);
 
 	}
 	
