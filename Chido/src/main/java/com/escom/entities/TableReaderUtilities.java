@@ -10,6 +10,7 @@ public class TableReaderUtilities {
 		//variable que nos indica si el esta parte del string es basura
 		boolean trash = true;
 		ArrayList<ArrayList<Materia>> semestres = new ArrayList<ArrayList<Materia>>();
+		System.out.println(tables.length);
 		for(int i = 0; i<tables.length; i++) {
 			// si es basura, omitimos esa parte del string
 			if(trash) { trash = false; continue;}

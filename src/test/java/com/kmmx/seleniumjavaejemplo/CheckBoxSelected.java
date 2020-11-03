@@ -43,7 +43,7 @@ public class CheckBoxSelected {
 	public void testGooglePage() {
 		driver.findElement(By.cssSelector("input[id*='ctl00_mainCopy_Txbx_Busqueda']")).sendKeys("2001400264");	
 		driver.findElement(By.cssSelector("input[id*='ctl00_mainCopy_Btn_Buscar']")).click();		
-		String noBoleta = "2010400511";
+		String noBoleta = "2012400005";
 		driver.get("https://www.saes.escasto.ipn.mx/Ejecutivo/BUSQUEDA_ALUMNO/BusquedaAlumnoRes.aspx?Boleta="+noBoleta+"&Tipo=Inscrito");		
 		try {
 			Thread.sleep(5000);

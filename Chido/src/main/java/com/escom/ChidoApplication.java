@@ -70,7 +70,7 @@ public class ChidoApplication {
 			Alumno alumno = readerTBL.getAlumnoNotes(driver.getPageSource());
 			alumno.setNoBoleta(noBoleta);
 					
-			for(Materia a:alumno.getPrimerSemestre()) {
+			/*for(Materia a:alumno.getPrimerSemestre()) {
 				System.out.println(a.getClave()+ " "+ a.getCalificacion());
 				a.setBoleta(noBoleta);			
 				repo.save(a);
@@ -94,7 +94,7 @@ public class ChidoApplication {
 				System.out.println(a.getClave()+ " "+ a.getCalificacion());
 				a.setBoleta(noBoleta);			
 				repo.save(a);
-			}
+			}*/
 		//}
 		
 	}
