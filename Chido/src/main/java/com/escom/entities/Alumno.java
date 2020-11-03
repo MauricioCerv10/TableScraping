@@ -4,30 +4,19 @@ import java.util.ArrayList;
 
 public class Alumno {
 	private String noBoleta;
-	private ArrayList<Materia> primerSemestre;
-	private ArrayList<Materia> segundoSemestre;
-	private ArrayList<Materia> tercerSemestre;
-	private ArrayList<Materia> cuartoSemestre;
-	private ArrayList<Materia> quintoSemestre;
+	private ArrayList<ArrayList<Materia>> semestres;
+	
 	
 	public Alumno() {}
 	
-	public Alumno(String noBoleta, ArrayList<Materia> primerSemestre, ArrayList<Materia> segundoSemestre, ArrayList<Materia> tercerSemestre,
-			ArrayList<Materia> cuartoSemestre, ArrayList<Materia> quintoSemestre) {
+	public Alumno(String noBoleta, ArrayList<ArrayList<Materia>> semestres) {
 		this.noBoleta = noBoleta;
-		this.primerSemestre = primerSemestre;
-		this.segundoSemestre = segundoSemestre;
-		this.tercerSemestre = tercerSemestre;
-		this.cuartoSemestre = cuartoSemestre;
-		this.quintoSemestre = quintoSemestre;
+		this.semestres = semestres;
+		
 	}
-	public Alumno( ArrayList<Materia> primerSemestre, ArrayList<Materia> segundoSemestre, ArrayList<Materia> tercerSemestre,
-			ArrayList<Materia> cuartoSemestre, ArrayList<Materia> quintoSemestre) {
-		this.primerSemestre = primerSemestre;
-		this.segundoSemestre = segundoSemestre;
-		this.tercerSemestre = tercerSemestre;
-		this.cuartoSemestre = cuartoSemestre;
-		this.quintoSemestre = quintoSemestre;
+	public Alumno( ArrayList<ArrayList<Materia>> semestres) {
+		this.semestres = semestres;
+		
 	}
 
 
@@ -37,36 +26,16 @@ public class Alumno {
 	public void setNoBoleta(String noBoleta) {
 		this.noBoleta = noBoleta;
 	}
-	public ArrayList<Materia> getPrimerSemestre() {
-		return primerSemestre;
+
+	public ArrayList<ArrayList<Materia>> getSemestres() {
+		return semestres;
 	}
-	public void setPrimerSemestre(ArrayList<Materia> primerSemestre) {
-		this.primerSemestre = primerSemestre;
+
+	public void setSemestres(ArrayList<ArrayList<Materia>> semestres) {
+		this.semestres = semestres;
 	}
-	public ArrayList<Materia> getSegundoSemestre() {
-		return segundoSemestre;
-	}
-	public void setSegundoSemestre(ArrayList<Materia> segundoSemestre) {
-		this.segundoSemestre = segundoSemestre;
-	}
-	public ArrayList<Materia> getTercerSemestre() {
-		return tercerSemestre;
-	}
-	public void setTercerSemestre(ArrayList<Materia> tercerSemestre) {
-		this.tercerSemestre = tercerSemestre;
-	}
-	public ArrayList<Materia> getCuartoSemestre() {
-		return cuartoSemestre;
-	}
-	public void setCuartoSemestre(ArrayList<Materia> cuartoSemestre) {
-		this.cuartoSemestre = cuartoSemestre;
-	}
-	public ArrayList<Materia> getQuintoSemestre() {
-		return quintoSemestre;
-	}
-	public void setQuintoSemestre(ArrayList<Materia> quintoSemestre) {
-		this.quintoSemestre = quintoSemestre;
-	}
+
+	
 	
 	
 }

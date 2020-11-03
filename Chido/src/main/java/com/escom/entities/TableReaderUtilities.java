@@ -11,6 +11,7 @@ public class TableReaderUtilities {
 		boolean trash = true;
 		ArrayList<ArrayList<Materia>> semestres = new ArrayList<ArrayList<Materia>>();
 		System.out.println(tables.length);
+		
 		for(int i = 0; i<tables.length; i++) {
 			// si es basura, omitimos esa parte del string
 			if(trash) { trash = false; continue;}
@@ -26,11 +27,13 @@ public class TableReaderUtilities {
 						+ newMateria.getFecha() + " \t\t\t\t\t " + newMateria.getPeriodo() + " \t "
 						+ newMateria.getFormaEval() + " \t " + newMateria.getCalificacion());*/
 				materiasSemestre.add(newMateria);
+				
 			}
 			semestres.add(materiasSemestre);
 			
 		}
-		return new Alumno(semestres.get(0),semestres.get(1),semestres.get(2),semestres.get(3),semestres.get(4));
+		
+		return new Alumno(semestres);
 	}
 	// Obtenemos el nombre de la materia, sus datos y la calificacion del alumno en dicha materia
 	private Materia getcalificacionMateriaAlumno(String row, int semestre) {
@@ -75,4 +78,6 @@ public class TableReaderUtilities {
 		}
 		return true;
 	}
+	
+	
 }
